@@ -1,3 +1,51 @@
-body{
-    font-family: "Poppins", sans-serif;
+/* root colors */
+:root {
+  --orange-color: #da722c;
+  --dark-blue-color: #023047;
+  --light-blue-color: #6f7dfb;
+  --dark-color: #070917;
+  --light-color: #e8f7fb;
+  --blue-color: #057ada;
+}
+/* base styling */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+/* base styling ends */
+.wrapper{
+    max-width:1134px;
+    margin: 0 auto;
+}
+/* button styling */
+.btn{
+    text-decoration: none;
+    padding: 16px 32px;
+    border-radius: 24px;
+    color: #fff;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 16px;
+    position: relative;
+}
+.btn.dark{
+    background: var(--dark-blue-color);
+}
+.btn.light {
+    background: var(--orange-color);
+}
+.btn.enrol-icon::before{
+    content: url(assets/PencilAlt.svg);
+    position: absolute;
+    top: 50%;
+    left: 32px;
+    transform: translateY(-50%);
+}
+.btn.enrol-icon{
+    padding-left: 60px;
 }
